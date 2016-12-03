@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   request('https://en.wikipedia.org/w/api.php?action=query&titles=Hitler&prop=info&format=json', function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var json = JSON.parse(body);
-      var hasTimeTravelBeenInvented = Object.keys(json.query.pages).length > 0 ? 'NO' : 'YES';
+      var hasTimeTravelBeenInvented = Object.keys(json.query.pages).length === 0;
       res.render('index', { hasTimeTravelBeenInvented });
     }
   })

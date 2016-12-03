@@ -1,2 +1,8 @@
 <h1>Has Time Travel Been Invented?</h1>
-<p>{{hasTimeTravelBeenInvented}}</p>
+{{#if hasTimeTravelBeenInvented}}
+<h3>YES</h3>
+<p>There's no mention of Hitler on Wikipedia.</p>
+{{else}}
+<h3>NO</h3>
+<p>Hiter's Wikipedia article still exists.</p>
+{{/if}}
